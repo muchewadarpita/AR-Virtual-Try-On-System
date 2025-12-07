@@ -1,0 +1,52 @@
+{
+  "name": "ar-virtual-dress-tryon",
+  "version": "1.0.0",
+  "description": "WebAR Virtual Dress Try-On Application using MediaPipe Pose Detection",
+  "main": "app.js",
+  "scripts": {
+    "start": "http-server -p 8000 -c-1",
+    "dev": "http-server -p 8000 -c-1 -o",
+    "serve": "python -m http.server 8000",
+    "build": "echo 'No build needed - static files only'",
+    "deploy": "echo 'Deploy to GitHub Pages, Netlify, or Vercel'"
+  },
+  "keywords": [
+    "ar",
+    "webAR",
+    "virtual-tryon",
+    "mediapipe",
+    "pose-detection",
+    "fashion",
+    "augmented-reality",
+    "computer-vision",
+    "javascript",
+    "typescript"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/ar-virtual-tryon.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/ar-virtual-tryon/issues"
+  },
+  "homepage": "https://github.com/yourusername/ar-virtual-tryon#readme",
+  "browserslist": [
+    "last 2 Chrome versions",
+    "last 2 Firefox versions",
+    "last 2 Safari versions",
+    "last 2 Edge versions"
+  ],
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  }
+}
+
+
+

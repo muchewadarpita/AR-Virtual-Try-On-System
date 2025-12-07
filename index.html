@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AR Virtual Dress Try-On</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- MediaPipe Pose Detection -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils/control_utils.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@mediapipe/pose/pose.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+      <div class="loading-content">
+        <div class="spinner"></div>
+        <h2>Loading AR Experience...</h2>
+        <p>Please allow camera access when prompted</p>
+      </div>
+    </div>
+
+    <!-- Main AR Container -->
+    <div id="ar-container">
+      <!-- Video Feed -->
+      <video id="video" autoplay playsinline></video>
+
+      <!-- Canvas for AR Overlay -->
+      <canvas id="output-canvas"></canvas>
+
+      <!-- UI Controls -->
+      <div id="controls">
+        <div class="control-header">
+          <h1>👗 Virtual Try-On</h1>
+          <button id="capture-btn" class="icon-btn" title="Take Photo">
+            📷
+          </button>
+        </div>
+
+        <!-- Dress Selection Carousel -->
+        <div id="dress-selector">
+          <h3>Select Outfit</h3>
+          <div class="dress-carousel">
+            <button class="carousel-btn prev" id="prev-btn">‹</button>
+            <div class="dress-grid" id="dress-grid">
+              <!-- Dresses will be populated by JavaScript -->
+            </div>
+            <button class="carousel-btn next" id="next-btn">›</button>
+          </div>
+        </div>
+
+        <!-- Settings -->
+        <div id="settings">
+          <label class="toggle-label">
+            <input type="checkbox" id="show-skeleton" checked />
+            <span>Show Skeleton</span>
+          </label>
+          <label class="toggle-label">
+            <input
+              type="range"
+              id="dress-scale"
+              min="0.8"
+              max="1.2"
+              step="0.05"
+              value="1.0"
+            />
+            <span>Dress Size</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Info Panel -->
+      <div id="info-panel">
+        <div id="fps">FPS: 0</div>
+        <div id="status">Initializing...</div>
+      </div>
+    </div>
+
+    <!-- Photo Preview Modal -->
+    <div id="photo-modal" class="modal">
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2>Your Photo</h2>
+        <img id="captured-photo" alt="Captured photo" />
+        <div class="modal-actions">
+          <button id="download-btn" class="btn-primary">Download</button>
+          <button id="share-btn" class="btn-secondary">Share</button>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
+
+
