@@ -1,4 +1,4 @@
-# 👗 AR Virtual Dress Try-On
+  # 👗 AR Virtual Dress Try-On
 
 A WebAR application that allows users to try on virtual dresses in real-time using their device camera. Built with MediaPipe Pose Detection and vanilla JavaScript.
 
@@ -67,27 +67,6 @@ cd ar-virtual-tryon
    - Allow camera permissions when prompted
    - Start trying on dresses!
 
-### Deployment
-
-#### Deploy to GitHub Pages
-
-1. Push code to GitHub repository
-2. Go to Settings → Pages
-3. Select branch `main` and folder `/root`
-4. Your app will be live at `https://yourusername.github.io/ar-virtual-tryon`
-
-#### Deploy to Netlify
-
-1. Create account at [netlify.com](https://netlify.com)
-2. Drag and drop the project folder
-3. App will be live instantly with HTTPS
-
-#### Deploy to Vercel
-
-```bash
-npm i -g vercel
-vercel
-```
 
 ## 📱 How to Use
 
